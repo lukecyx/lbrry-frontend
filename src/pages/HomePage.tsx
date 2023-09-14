@@ -1,5 +1,9 @@
-import libraryBuilding from "../assets/library-building.jpg"
+import { useQuery } from "@tanstack/react-query";
+import fetchAllBooks from "../services/lbrry/fetchAllBooks";
+
+
 const HomePage = () => {
+    const results = useQuery([], fetchAllBooks);
     return <>
         Home
     </>;
